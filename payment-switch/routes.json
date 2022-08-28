@@ -1,4 +1,3 @@
 {
-  "/payments/debit" : "/debit",
-  "/payments/credit" : "/credit"
+  "/payments/*": "/$1"
 }

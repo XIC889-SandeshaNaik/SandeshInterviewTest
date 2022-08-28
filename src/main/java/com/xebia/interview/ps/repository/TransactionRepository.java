@@ -1,7 +1,7 @@
 package com.xebia.interview.ps.repository;
 
-import com.xebia.interview.ps.domain.Transaction;
+import com.xebia.interview.ps.entities.TransactionHistory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TransactionRepository extends JpaRepository<Transaction, Long> {
+public interface TransactionRepository extends JpaRepository<TransactionHistory, Long> {
 }

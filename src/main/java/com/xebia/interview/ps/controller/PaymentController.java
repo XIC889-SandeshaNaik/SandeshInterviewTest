@@ -1,6 +1,7 @@
 package com.xebia.interview.ps.controller;
 
 import com.xebia.interview.ps.request.PaymentRequest;
+import com.xebia.interview.ps.response.TransactionResponse;
 import com.xebia.interview.ps.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class PaymentController {
 
     @Autowired
-    private PaymentService paymentService;
+    private PaymentService paymentServiceImpl;
 
     @PostMapping
-    public ResponseEntity<Void> makePayment(@RequestBody PaymentRequest paymentRequest) throws Exception {
-        paymentService.makePayment(paymentRequest);
-        return ResponseEntity.status(HttpStatus.OK).build();
+    public ResponseEntity<TransactionResponse> makePayment(@RequestBody PaymentRequest paymentRequest) throws Exception {
+        TransactionResponse response = paymentServiceImpl.makePayment(paymentRequest);
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 }

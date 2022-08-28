@@ -1,4 +1,28 @@
 {
-  "debit": {},
-  "credit": {}
+  "users": [
+    {
+      "id": 1,
+      "accountNo": "ad003",
+      "balance": 17700,
+      "secretPIN": "2435"
+    },
+    {
+      "id": 2,
+      "accountNo": "ad001",
+      "balance": 12500,
+      "secretPIN": "5555"
+    },
+    {
+      "id": 3,
+      "accountNo": "ad002",
+      "balance": 7200,
+      "secretPIN": "1111"
+    },
+    {
+      "id": 4,
+      "accountNo": "ad004",
+      "balance": 1800,
+      "secretPIN": "2222"
+    }
+  ]
 }

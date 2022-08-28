@@ -8,16 +8,19 @@ public class PaymentRequest {
     private final String fromAcc;
     private final String toAcc;
     private final String note;
+    private final String secretPIN;
 
-    @JsonCreator
-    public PaymentRequest(@JsonProperty Double paymentAmt,
-                          @JsonProperty String fromAcc,
-                          @JsonProperty String toAcc,
-                          @JsonProperty String note) {
+
+    public PaymentRequest( Double paymentAmt,
+                           String fromAcc,
+                           String toAcc,
+                           String note,
+                           String secretPIN) {
         this.paymentAmt = paymentAmt;
         this.fromAcc = fromAcc;
         this.toAcc = toAcc;
         this.note = note;
+        this.secretPIN = secretPIN;
     }
 
     public Double getPaymentAmt() {
@@ -34,6 +37,10 @@ public class PaymentRequest {
 
     public String getNote() {
         return note;
+    }
+
+    public String getSecretPIN() {
+        return secretPIN;
     }
 }
 

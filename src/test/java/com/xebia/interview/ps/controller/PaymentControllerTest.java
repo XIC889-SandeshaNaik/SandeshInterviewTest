@@ -27,10 +27,11 @@ class PaymentControllerTest {
     @Test
     void should_make_a_payment() throws Exception {
         var requestJson = objectMapper.writeValueAsString(
-                Map.of("paymentAmt", 10.00,
-                        "fromAcc", "a123",
-                        "toAcc", "b123"));
-        System.out.println(requestJson);
+                Map.of(  "paymentAmt",100.0,
+                "fromAcc","ad001",
+                "toAcc","ad002",
+                "note" , "Paying rent",
+                "secretPIN","5555"));
         this.mockMvc.perform(post("/payments")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(requestJson))
